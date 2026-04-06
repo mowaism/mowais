@@ -1,14 +1,56 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>mowais</title>
-</head>
-<body style="margin:0;">
+  <title>Movepixels3d</title>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+    }
 
-<video autoplay muted loop playsinline preload="metadata"
-style="width:100vw; height:100vh; object-fit:cover;">
+    video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      z-index: -1;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.4);
+    }
+
+    .content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      text-align: center;
+      font-size: 2rem;
+    }
+  </style>
+</head>
+
+<body>
+
+<video autoplay muted loop playsinline>
   <source src="video.mp4" type="video/mp4">
 </video>
+
+<div class="overlay"></div>
+
+<div class="content">
+  <h1>High-End Product Animation</h1>
+  <p>We create cinematic visuals that sell</p>
+</div>
 
 </body>
 </html>
